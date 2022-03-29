@@ -1,10 +1,5 @@
 import talib
 
-features = sorted([
-    'EMA',
-])
-
-
 def calc_features(df):
     open = df['op']
     high = df['hi']
@@ -25,9 +20,6 @@ def calc_features(df):
     #   
     #
     #ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
-    
-
-
-
+ 
 
     return df
