@@ -14,9 +14,7 @@ if __name__  == '__main__':
 
    apiKey = os.getenv("API_KEY")
    secretKey = os.getenv("SECRET_KEY")
-   # lot = float(os.getenv("LOT"))
-   # max_lot = float(os.getenv("MAX_LOT"))
    interval_sec = int(os.getenv("INTERVAL_SEC"))
 
-   exchange = ccxt.binance({"apiKey":apiKey, "secret":secretKey, "options": {"defaultType": "future"}, "enableRateLimit": True,})
+   exchange = ccxt.binance({"apiKey":apiKey, "secret":secretKey, "options": {"defaultType": "future"}, "enableRateLimit": True})
    main.start(exchange, interval_sec)
