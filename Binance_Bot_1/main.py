@@ -1,18 +1,11 @@
-import pickle
-# from cv2 import line
 import joblib
 from datetime import datetime, timedelta
 import time
 import requests
 import pandas as pd
 import numpy as np
-import os
 import ccxt
-# from crypto_data_fetcher.binance_future import BinanceFutureFetcher
 import traceback
-
-#追加
-import requests
 
 from features import features,calc_features
 
@@ -261,7 +254,7 @@ def start(exchange, interval_sec):
 
                 #AVAXUSDT------------------------------
                 #ロングクローズ
-                if (df_AVAX_features['sig1'].iloc[-2] > (-9/10))&(position_AVAX["positionSide"] == "BUY"):
+                #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
                     order_side = "SELL"
                     order_size = abs(position_AVAX["positionAmt"])
                     order_binance(exchange,market_AVAX,order_side,order_size)
@@ -273,49 +266,49 @@ def start(exchange, interval_sec):
 
 
                 #DOTUSDT------------------------------
-                if (df_DOT_features['sig2'].iloc[-2] > (-11/10))&(position_DOT["positionSide"] == "BUY"):
+                #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
                     order_side = "SELL"
                     order_size = abs(position_DOT["positionAmt"])
                     order_binance(exchange,market_DOT,order_side,order_size)
 
                 #VETUSDT------------------------------
-                if (df_VET_features['sig3'].iloc[-2] > (-5/10))&(position_VET["positionSide"] == "BUY"):
+                #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
                     order_side = "SELL"
                     order_size = abs(position_VET["positionAmt"])
                     order_binance(exchange,market_VET,order_side,order_size)
 
                 #NEARUSDT------------------------------
-                if (df_NEAR_features['sig2'].iloc[-2] > (-11/10))&(position_NEAR["positionSide"] == "BUY"):
+                #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
                     order_side = "SELL"
                     order_size = abs(position_NEAR["positionAmt"])
                     order_binance(exchange,market_NEAR,order_side,order_size)
 
                 #MANAUSDT------------------------------
-                if (df_MANA_features['sig3'].iloc[-2] > (-7/10))&(position_MANA["positionSide"] == "BUY"):
+                #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
                     order_side = "SELL"
                     order_size = abs(position_MANA["positionAmt"])
                     order_binance(exchange,market_MANA,order_side,order_size)
 
                 #LUNAUSDT------------------------------
-                if (df_LUNA_features['sig2'].iloc[-2] > (-10/10))&(position_LUNA["positionSide"] == "BUY"):
+                #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
                     order_side = "SELL"
                     order_size = abs(position_LUNA["positionAmt"])
                     order_binance(exchange,market_LUNA,order_side,order_size)
 
                 #SOLUSDT------------------------------
-                if (df_SOL_features['sig3'].iloc[-2] > (-7/10))&(position_SOL["positionSide"] == "BUY"):
+                #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
                     order_side = "SELL"
                     order_size = abs(position_SOL["positionAmt"])
                     order_binance(exchange,market_SOL,order_side,order_size)
 
                 #ENJUSDT------------------------------
-                if (df_ENJ_features['sig3'].iloc[-2] > (-7/10))&(position_ENJ["positionSide"] == "BUY"):
+                #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
                     order_side = "SELL"
                     order_size = abs(position_ENJ["positionAmt"])
                     order_binance(exchange,market_ENJ,order_side,order_size)
 
                 #ADAUSDT------------------------------
-                if (df_ADA_features['sig4'].iloc[-2] > (-5/10))&(position_ADA["positionSide"] == "BUY"):
+                #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
                     order_side = "SELL"
                     order_size = abs(position_ADA["positionAmt"])
                     order_binance(exchange,market_ADA,order_side,order_size)
@@ -324,8 +317,7 @@ def start(exchange, interval_sec):
 
                 #AVAXUSDT------------------------------
                 #ロングエントリー
-                # if (df_AVAX_features['sig1'].iloc[-2] < (-11/10)) & (position_AVAX["positionAmt"] == 0.0):
-                if (df_AVAX_features['sig1'].iloc[-2] < (-11/10)) & (position_AVAX["positionAmt"] < 3.0):
+                #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
                     order_side = "BUY"
                     order_size = 1
                     order_binance(exchange,market_AVAX,order_side,order_size)
@@ -337,56 +329,56 @@ def start(exchange, interval_sec):
 
                 #DOTUSDT------------------------------
                 #ロングエントリー
-                if (df_DOT_features['sig2'].iloc[-2] < (-13/10)) & (position_DOT["positionAmt"] < 15.0):
+                #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
                     order_side = "BUY"
                     order_size = 5
                     order_binance(exchange,market_DOT,order_side,order_size)
 
                 #VETUSDT------------------------------
                 #ロングエントリー
-                if (df_VET_features['sig3'].iloc[-2] < (-8/10)) & (position_VET["positionAmt"] < 4800):
+                #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
                     order_side = "BUY"
                     order_size = 1600
                     order_binance(exchange,market_VET,order_side,order_size)
 
                 #NEARUSDT------------------------------
                 #ロングエントリー
-                if (df_NEAR_features['sig2'].iloc[-2] < (-13/10)) & (position_NEAR["positionAmt"] < 24):
+                #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
                     order_side = "BUY"
                     order_size = 8
                     order_binance(exchange,market_NEAR,order_side,order_size)
 
                 #MANAUSDT------------------------------
                 #ロングエントリー
-                if (df_MANA_features['sig3'].iloc[-2] < (-10/10)) & (position_MANA["positionAmt"] < 90):
+                #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
                     order_side = "BUY"
                     order_size = 30
                     order_binance(exchange,market_MANA,order_side,order_size)
 
                 #LUNAUSDT------------------------------
                 #ロングエントリー
-                if (df_LUNA_features['sig2'].iloc[-2] < (-12/10)) & (position_LUNA["positionAmt"] < 3):
+                #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
                     order_side = "BUY"
                     order_size = 1.0
                     order_binance(exchange,market_LUNA,order_side,order_size)
 
                 #SOLUSDT------------------------------
                 #ロングエントリー
-                if (df_SOL_features['sig3'].iloc[-2] < (-10/10)) & (position_SOL["positionAmt"] < 3):
+                #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
                     order_side = "BUY"
                     order_size = 1.0
                     order_binance(exchange,market_SOL,order_side,order_size)
 
                 #ENJUSDT------------------------------
                 #ロングエントリー
-                if (df_ENJ_features['sig3'].iloc[-2] < (-10/10)) & (position_ENJ["positionAmt"] < 150):
+                #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
                     order_side = "BUY"
                     order_size = 50
                     order_binance(exchange,market_ENJ,order_side,order_size)
 
                 #ADAUSDT------------------------------
                 #ロングエントリー
-                if (df_ADA_features['sig4'].iloc[-2] < (-8/10)) & (position_ADA["positionAmt"] < 300):
+               #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
                     order_side = "BUY"
                     order_size = 100
                     order_binance(exchange,market_ADA,order_side,order_size)
@@ -398,14 +390,12 @@ def start(exchange, interval_sec):
                 pass
 
 
-        # #時間アノマリーロジック
+        # アノマリーロジック
         weekday = datetime.now().weekday()
 
-        # if ((dt_now.hour % 17 == 0) & (dt_now.minute % 57 == 0)): #日本時間で午前3時
-        # if dt_now.hour % 18 == 0: #日本時間で午前3時
-        if (dt_now.hour == 4) & (dt_now.minute == 1): #日本時間で13時
+        #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
             try:
-                line_notify.send("午後の13時です")
+                line_notify.send("午後の●時です")
 
                 market_ETH = "ETHUSDT"
                 position_ETH = get_binance_position(exchange, market_ETH)
@@ -422,12 +412,10 @@ def start(exchange, interval_sec):
 
                     line_notify.send("ショートクローズ")
 
-                #月曜日、火曜日、水曜日はロングのエントリーをする
                 #ロングエントリー
-                if ((weekday == 0) | (weekday == 1) | (weekday == 2)):
-                    line_notify.send("ロングエントリー(月/火/水)")
+                #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
+                    line_notify.send("ロングエントリー")
 
-                    # if (position_ETH["positionAmt"] == 0.0):
                     order_side = "BUY"
                     order_size = 0.05
                     order_binance(exchange,market_ETH,order_side,order_size)
@@ -438,11 +426,10 @@ def start(exchange, interval_sec):
                 line_notify.send("\n 何らかのエラー")
                 pass
 
-        # if ((dt_now.hour % 13 == 0) & (dt_now.minute % 57 == 0)): #日本時間で23時
-        # if dt_now.hour % 14 == 0: #日本時間で23時
-        if (dt_now.hour == 0) & (dt_now.minute == 1): #日本時間で午前9時
+
+        #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
             try:
-                line_notify.send("午前の9時です")
+                line_notify.send("午前の●時です")
 
                 market_ETH = "ETHUSDT"
                 position_ETH = get_binance_position(exchange, market_ETH)
@@ -451,28 +438,28 @@ def start(exchange, interval_sec):
                 # line_notify.send("{0}のポジションサイド:{1}".format(str(market_ETH),str(position_ETH['positionSide'])))
                 # line_notify.send("{0}のポジションサイズ:{1}".format(str(market_ETH),str(position_ETH['positionAmt'])))
 
-                #火曜日と金曜日はロングのクローズのみ
-                if ((weekday == 1) | (weekday == 4)):
-                    line_notify.send("ロングクローズのみ(火/金)")
+               
+                #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
+                    line_notify.send("ロングクローズのみ")
 
                     if (position_ETH['positionSide'] == "BUY"):
                         order_side = "SELL"
                         order_size = abs(position_ETH["positionAmt"])
                         order_binance(exchange,market_ETH,order_side,order_size)
 
-                #それ以外の曜日はロングのクローズとショートのエントリーも行う
+                
                 else:
                     if (position_ETH['positionSide'] == "BUY"):
                         order_side = "SELL"
                         order_size = abs(position_ETH["positionAmt"])
                         order_binance(exchange,market_ETH,order_side,order_size)
 
-                    #if (position_ETH["positionAmt"] == 0.0):
-                    line_notify.send("ショートエントリー")
+                    #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
+                        line_notify.send("ショートエントリー")
 
-                    order_side = "SELL"
-                    order_size = 0.05
-                    order_binance(exchange,market_ETH,order_side,order_size)
+                        order_side = "SELL"
+                        order_size = 0.05
+                        order_binance(exchange,market_ETH,order_side,order_size)
 
 
             except Exception as e:
@@ -481,18 +468,13 @@ def start(exchange, interval_sec):
                 line_notify.send("\n 何らかのエラー")
                 pass
 
-
-
         time.sleep(60)
-        # time.sleep(1200)
 
 if __name__  == '__main__':
 
     apiKey    = os.getenv("API_KEY")
     secretKey = os.getenv("SECRET_KEY")
-    # lot = float(os.getenv("LOT"))
-    # max_lot = float(os.getenv("MAX_LOT"))
     interval_sec = int(os.getenv("INTERVAL_SEC"))
 
-    exchange = ccxt.binance({"apiKey":apiKey, "secret":secretKey, "options": {"defaultType": "future"}, "enableRateLimit": True,})
+    exchange = ccxt.binance({"apiKey":apiKey, "secret":secretKey, "options": {"defaultType": "future"}, "enableRateLimit": True})
     start(exchange, interval_sec)
