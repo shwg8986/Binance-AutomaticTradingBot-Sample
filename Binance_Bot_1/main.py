@@ -10,7 +10,7 @@ import traceback
 
 from features import features,calc_features
 
-#追加
+#Line通知
 class LineNotify:
     def __init__(self):
         self.line_notify_token = os.getenv("LINE_NOTIFY_TOKEN")
@@ -92,10 +92,10 @@ def get_binance_position(binance,market):
 def order_binance(exchange,market,order_side,order_size):
     order = exchange.fapiPrivate_post_order(
         {
-            "symbol": market,
-            "side": order_side,
-            "type": "MARKET",
-            "quantity": order_size,
+            "symbol": market,#銘柄の指定
+            "side": order_side, #ロングorショート
+            "type": "MARKET", #指値の場合はLIMIT
+            "quantity": order_size, #何枚ポジションを持つか
             # "price":order_price,
             # "timeInForce": "GTC",
             # "reduce_only": reduce,
