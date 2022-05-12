@@ -196,17 +196,17 @@ def start(exchange, interval_sec):
                 line_notify.send("{0}のポジションサイズ:{1}".format(str(market_MANA),str(position_MANA['positionAmt'])))
 
                 #LUNAUSDT------------------------------
-                market_LUNA = 'LUNAUSDT'
-                df_LUNA = get_binance_ohlcv(market_LUNA,from_time,interval_sec,limit)
+#                 market_LUNA = 'LUNAUSDT'
+#                 df_LUNA = get_binance_ohlcv(market_LUNA,from_time,interval_sec,limit)
 
-                df_LUNA_features = calc_features(df_LUNA)
-                position_LUNA = get_binance_position(exchange, market_LUNA)
+#                 df_LUNA_features = calc_features(df_LUNA)
+#                 position_LUNA = get_binance_position(exchange, market_LUNA)
 
-                print("{0}のポジションサイド:{1}".format(str(market_LUNA),str(position_LUNA['positionSide'])))
-                print("{0}のポジションサイズ:{1}".format(str(market_LUNA),str(position_LUNA['positionAmt'])))
+#                 print("{0}のポジションサイド:{1}".format(str(market_LUNA),str(position_LUNA['positionSide'])))
+#                 print("{0}のポジションサイズ:{1}".format(str(market_LUNA),str(position_LUNA['positionAmt'])))
 
-                # line_notify.send("{0}のポジションサイド:{1}".format(str(market_MANA),str(position_MANA['positionSide'])))
-                line_notify.send("{0}のポジションサイズ:{1}".format(str(market_LUNA),str(position_LUNA['positionAmt'])))
+#                 # line_notify.send("{0}のポジションサイド:{1}".format(str(market_MANA),str(position_MANA['positionSide'])))
+#                 line_notify.send("{0}のポジションサイズ:{1}".format(str(market_LUNA),str(position_LUNA['positionAmt'])))
 
                 #SOLUSDT------------------------------
                 market_SOL = 'SOLUSDT'
@@ -291,10 +291,10 @@ def start(exchange, interval_sec):
                     order_binance(exchange,market_MANA,order_side,order_size)
 
                 #LUNAUSDT------------------------------
-                #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
-                    order_side = "SELL"
-                    order_size = abs(position_LUNA["positionAmt"])
-                    order_binance(exchange,market_LUNA,order_side,order_size)
+#                 #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
+#                     order_side = "SELL"
+#                     order_size = abs(position_LUNA["positionAmt"])
+#                     order_binance(exchange,market_LUNA,order_side,order_size)
 
                 #SOLUSDT------------------------------
                 #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
@@ -358,10 +358,10 @@ def start(exchange, interval_sec):
 
                 #LUNAUSDT------------------------------
                 #ロングエントリー
-                #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
-                    order_side = "BUY"
-                    order_size = 1.0
-                    order_binance(exchange,market_LUNA,order_side,order_size)
+#                 #if ーーーーーーーーーーーーーーーーーーーーーー略ーーーーーーーーーーーーーーーーーーーーーーーーーーー : 
+#                     order_side = "BUY"
+#                     order_size = 1.0
+#                     order_binance(exchange,market_LUNA,order_side,order_size)
 
                 #SOLUSDT------------------------------
                 #ロングエントリー
