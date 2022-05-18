@@ -1,4 +1,4 @@
-# BinanceBot-Sample
+# Binance_AutomaticTradingBot-Sample
 
 普段自分が使っている世界最大の仮想通貨取引所Binanceにて稼働させている自動売買Botのサンプルになります。
 AWS EC2のt2.microインスタンスをお借りして24時間動かしています。
